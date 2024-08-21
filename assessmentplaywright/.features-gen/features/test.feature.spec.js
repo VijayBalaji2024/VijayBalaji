@@ -3,9 +3,9 @@ import { test } from "../../steps/fixtures/fixture.ts";
 
 test.describe("Procurement Automation", () => {
 
-  test("Adding a new sofware request", { tag: ["@smoke"] }, async ({ Then, login, And, navi, viewrequest, addrequest }) => {
+  test("Adding a new sofware request", { tag: ["@smoke"] }, async ({ Then, login, And, navigate, viewrequest, addrequest }) => {
     await Then("Login", null, { login });
-    await And("navigate to \"Software\"", null, { navi });
+    await And("navigate to \"Software\"", null, { navigate });
     await And("navigato to ViewRequest", null, { viewrequest });
     await And("navigate to AddRequest", null, { addrequest });
   });
